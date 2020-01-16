@@ -29,13 +29,13 @@ const users = JSON.parse(userData);
 
 // Account routes
 // Creating the index route which points to the root '/' renders the index view and passes in an object with a single key value pair title: index (render is a function of the respond object)
-app.get('/', (req, res) => res.render('index', {title: 'Account Summary', accounts: 'accounts'}));
+app.get('/', (req, res) => res.render('index', {title: 'Account Summary', accounts: accounts}));
 // Creating the savings route which points to /savings and renders the savings view and passes in an object key value pair
-app.get('/savings', (req, res) => res.render('account', { account: account.savings }));
+app.get('/savings', (req, res) => res.render('account', { account: accounts.savings }));
 // Creating the checking route which points to /checking and renders the checking view and passes in an object key value pair
-app.get('/checking', (req, res) => res.render('account', {account: account.checking}));
+app.get('/checking', (req, res) => res.render('account', {account: accounts.checking}));
 // Creating the credit route which points to /credit and renders the credit view and passes in an object key value pair
-app.get('/credit', (req, res) => res.render('account', {account: account.credit}));
+app.get('/credit', (req, res) => res.render('account', {account: accounts.credit}));
 
 // Profile routes
 // Creating the profile route which points to /profile and renders the profile view and passes in an object key value pair
